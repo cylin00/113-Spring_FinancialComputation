@@ -25,17 +25,3 @@ def Get95ci(S0, r, q, sigma, T, K, n_sim, n_rep, option_type = 'call'):
     ci_high = mean_price + 2 * std_price
 
     return mean_price, ci_low, ci_high
-
-# S0 = 50
-# K = 50
-# r = 0.1
-# q = 0.05
-# sigma = 0.4
-# T = 0.5
-# num_sim = 10000
-# num_rep = 20
-
-# SimCall = Get95ci(S0, r, q, sigma, T, K, num_sim, num_rep, 'call')
-# SimPut = Get95ci(S0, r, q, sigma, T, K, num_sim, num_rep, 'put')
-# print("European Call Option Value:", SimCall[0], ", 95% CI: [", SimCall[1], ", ", SimCall[2], "]")
-# print("European Put Option Value:", SimPut[0], ", 95% CI: [", SimPut[1], ", ", SimPut[2], "]")

@@ -1,6 +1,5 @@
 import numpy as np
-import basic 
-import bonus1
+import Simulation as sim
 
 # --------- Inputs ---------
 
@@ -16,7 +15,7 @@ for j in range(n):
 
 # --------- Outputs ---------
     
-a, l, h, a_1, l_1, h_1, a_2, l_2, h_2 = basic.GetOptionValue(K, r, T, n_sim, n_rep, n, S0, q, sigma, corr)
-print(f"Basic -  Mean: {a:.4f}, 95% CI: [{l:.4f}, {h:.4f}], range ~ {(h - l):.4f}")
-print(f"Bonus1 - Mean: {a_1:.4f}, 95% CI: [{l_1:.4f}, {h_1:.4f}], range ~ {(h_1 - l_1):.4f}")
-print(f"Bonus2 - Mean: {a_2:.4f}, 95% CI: [{l_2:.4f}, {h_2:.4f}], range ~ {(h_2 - l_2):.4f}")
+a, l, h, a_1, l_1, h_1, a_2, l_2, h_2 = sim.GetOptionValue(K, r, T, n_sim, n_rep, n, S0, q, sigma, corr)
+print(f"Basic -  Mean: {a:.5f}, 95% CI: [{l:.5f}, {h:.5f}], range ~ {(h - l):.5f}")
+print(f"Bonus1 - Mean: {a_1:.5f}, 95% CI: [{l_1:.5f}, {h_1:.5f}], range ~ {(h_1 - l_1):.5f}")
+print(f"Bonus2 - Mean: {a_2:.5f}, 95% CI: [{l_2:.5f}, {h_2:.5f}], range ~ {(h_2 - l_2):.5f}")
